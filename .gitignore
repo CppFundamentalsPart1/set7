@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# folders you want excluded
+.vscode/
+Femke/
+.DS_Store
+build/
+.cache/
+
+# exclude zip files
+*.zip

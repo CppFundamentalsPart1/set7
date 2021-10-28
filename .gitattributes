@@ -1,0 +1,6 @@
+.gitattributes export-ignore
+.gitignore export-ignore
+Makefile export-ignore
+makefile export-ignore
+
+# add files you want uploaded to git but that are not to be submitted in the zip
