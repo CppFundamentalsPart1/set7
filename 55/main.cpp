@@ -1,33 +1,25 @@
-#include <csignal>
-#include <fstream>
-#include <iostream>
-#include <linux/acct.h>
-using namespace std;
+#include "main.ih"
 
-int main()
+#include <unistd.h>
+
+int main(int argc, char *argv[])
 {
-    acct_v3 data;
+    bool printAll = getopt(argc, argv, "a") == 'a';
 
-    ifstream acctFile("/var/log/account/pacct");
-
-    while (true)
+    if (argc < 3)
     {
-        acctFile.read(reinterpret_cast<char *>(&data), sizeof(data));
-
-        if (!acctFile)
-            break;
-
-
-        if (data.ac_exitcode != 0)
+        ifstream in("/var/log/account/pacct");
+        readProcess(in, printAll);
+        in.close();
+    }
+    else
+    {
+        for (size_t idx = 2, end = argc; idx < end; ++idx)
         {
-            cout << "program: ";
-
-            for (auto it = data.ac_comm; *it != 0; ++it)
-                cout << *it;
-
-            cout << " code: " << data.ac_exitcode << '\n';
+            ifstream in(argv[idx]);
+            readProcess(in, printAll);
+            in.close();
         }
     }
 
-    acctFile.close();
 }
