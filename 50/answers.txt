@@ -1,0 +1,3 @@
+A filestream uses an openmode to open a file, by default for an ofstream this is ios::out which creates a file if it does not exist. For an fstream this openmode is ios::in | ios::out which does not create the file if it does not exist.
+
+To fix the program we can change the line 'fstream out2{ "/tmp/out2" };' to 'fstream out2{ "/tmp/out2", ios::out };'

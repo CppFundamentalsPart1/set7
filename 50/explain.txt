@@ -1,0 +1,1 @@
+Explain why after running the code from the exercise the file "/tmp/out1" is created but the file "/tmp/out2" is not. Also provide a fix.
