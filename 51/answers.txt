@@ -1,0 +1,10 @@
+After extracting the first number the stringstream reaches the end of its buffer and sets the eof flag. When we assign a new value to the buffer this flag is not cleared, hence the second extraction fails. We must first clear the flags (using istr.clear()) before we can read from it again.
+
+The required repair is:
+
+    istr >> no1;
+
+    cout << "extracted first number: " << no1 << '\n';
+
+    istr.clear();
+    istr.str(argv[2]);
