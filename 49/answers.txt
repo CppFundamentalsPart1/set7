@@ -1,0 +1,13 @@
+results with if statement:
+    real    0m0.249s
+    user    0m0.245s
+    sys     0m0.004s
+
+results without if statement:
+    real    0m2.406s
+    user    0m2.398s
+    sys     0m0.001s
+
+So without the if statement the execution time is almost tenfold. This can be attributed to the insertions: since not every insertion check's the state of out it won't always realise it can't print before any insertions occur. On the other hand checking a flag is simple and prevents unnecessary insertions.
+
+Rule of thumb: If a direct test is available it should be used.

@@ -1,0 +1,1 @@
+Test the performence of testing and not testing for the state of an output stream before attempting to print.

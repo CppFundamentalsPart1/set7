@@ -21,6 +21,7 @@ PROGNAME = a.out
 BUILD_DIR = ../build/49/
 
 SOURCE = \
+main.cpp
 
 OUT = $(BUILD_DIR)$(PROGNAME)
 OBJS = $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
