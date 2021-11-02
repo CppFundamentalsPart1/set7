@@ -1,0 +1,1 @@
+Read the process accounting file and print all processes that did not exit normally. If the option -a is provided print all processes regardless of exit code. If filenames are provided read those instead of the default '/var/log/account/pacct'. If the process was killed with SIGKILL or SIGTERM print the name of the signal instead of its numeric value.

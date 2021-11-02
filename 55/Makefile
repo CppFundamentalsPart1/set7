@@ -22,7 +22,7 @@ BUILD_DIR = ../build/55/
 
 SOURCE = \
 main.cpp \
-readprocess.cpp \
+readprocesses.cpp \
 printprocess.cpp
 
 OUT = $(BUILD_DIR)$(PROGNAME)

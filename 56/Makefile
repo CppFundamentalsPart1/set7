@@ -21,6 +21,12 @@ PROGNAME = a.out
 BUILD_DIR = ../build/56/
 
 SOURCE = \
+main.cpp \
+dnaencoder/convtobinary.cpp \
+dnaencoder/convtotext.cpp \
+dnaencoder/copyfile.cpp \
+dnaencoder/getchars.cpp \
+dnaencoder/getbinary.cpp
 
 OUT = $(BUILD_DIR)$(PROGNAME)
 OBJS = $(SOURCE:%.cpp=$(BUILD_DIR)%.o)

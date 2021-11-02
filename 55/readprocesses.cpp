@@ -1,6 +1,6 @@
 #include "main.ih"
 
-void readProcess(ifstream &in, bool writeAll)
+void readProcesses(ifstream &in, bool writeAll)
 {
     acct_v3 processData;
     while (true)

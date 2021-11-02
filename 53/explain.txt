@@ -1,0 +1,1 @@
+display a floating point number in a given set of ways using one cout statement and one variable.

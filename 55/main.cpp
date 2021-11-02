@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     if (argc < 3)
     {
         ifstream in("/var/log/account/pacct");
-        readProcess(in, printAll);
+        readProcesses(in, printAll);
         in.close();
     }
     else
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         for (size_t idx = 2, end = argc; idx < end; ++idx)
         {
             ifstream in(argv[idx]);
-            readProcess(in, printAll);
+            readProcesses(in, printAll);
             in.close();
         }
     }

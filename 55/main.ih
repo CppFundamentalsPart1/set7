@@ -4,6 +4,6 @@
 #include <sys/acct.h>
 using namespace std;
 
-void readProcess(ifstream &in, bool writeAll);
+void readProcesses(ifstream &in, bool writeAll);
 
 void printProcess(acct_v3 const &process);

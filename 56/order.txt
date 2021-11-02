@@ -1,1 +1,12 @@
 explain.txt
+
+main.ih
+main.cpp
+
+dnaencoder.h
+dnaencoder.ih
+convtobinary.cpp
+convtotext.cpp
+copyfile.cpp
+getchars.cpp
+getbinary.cpp

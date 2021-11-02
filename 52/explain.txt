@@ -1,0 +1,1 @@
+Define a manipulator printing the current time in the same format as asctime but without the trailing newline.
