@@ -1,3 +1,13 @@
 explain.txt
 
 answers.txt
+
+main.cpp
+
+lock/lock.h
+lock/lock.ih
+lock/valid.cpp
+lock/open1.cpp
+lock/lockpath.cpp
+lock/open.cpp
+lock/stringname.cpp

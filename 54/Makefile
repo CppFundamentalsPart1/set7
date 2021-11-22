@@ -21,6 +21,12 @@ PROGNAME = a.out
 BUILD_DIR = ../build/54/
 
 SOURCE = \
+main.cpp \
+lock/valid.cpp \
+lock/open1.cpp \
+lock/lockpath.cpp \
+lock/open.cpp \
+lock/stringname.cpp \
 
 OUT = $(BUILD_DIR)$(PROGNAME)
 OBJS = $(SOURCE:%.cpp=$(BUILD_DIR)%.o)
