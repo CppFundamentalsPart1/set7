@@ -1,6 +1,5 @@
 explain.txt
 
-main.ih
 main.cpp
 
 dnaencoder/dnaencoder.h
