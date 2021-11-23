@@ -5,22 +5,26 @@
 
 class Lock
 {
-    int d_fd = -2;
+    int d_fileDescriptor = -1;  // file descriptor, negative indicates error
 
 public:
-    Lock(std::string const &path);
-    Lock(std::string const &path, std::string const &lockDir);
-    ~Lock();
+    Lock(std::string const &path);  // lock file in current directory (lock1)
 
-    bool valid() const;
+    // lock fine named path in directory lockDir (lock2)
+    Lock(std::string const &path, std::string const &lockDir);
+    ~Lock();  // releases the lock on the lockfile (lock3)
+
+    bool valid() const;  // is the file descriptor valid
 
 private:
-    int open(std::string lockPath) const;
+    static int open(std::string const &lockPath);  // open and lock the file
 
-    static std::string lockPath(std::string const &path,
-                                std::string const &lockDir);
+    static std::string lockPath(std::string const &path,      // create path
+                                std::string const &lockDir);  // for lockfile
 
-    static std::string stringName(std::string const &path,
+    // get the requested part of path by passing dirname or basename as fun
+    // use copy because fun is allowed to modify its argument
+    static std::string stringName(std::string path,
                                   char *(*fun)(char *));
 };
 

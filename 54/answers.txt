@@ -1,0 +1,38 @@
+Explain how you created the library, how you linked it to the program
+
+    The library is created by compiling the library sources as normal and then creating the library using the command:
+        $ ar rvs ../build/54/lib/liblockutil.a ../build/54/lib/lock/valid.o ../build/54/lib/lock/lock1.o ../build/54/lib/lock/lock2.o ../build/54/lib/lock/lock3.o ../build/54/lib/lock/lockpath.o ../build/54/lib/lock/open.o ../build/54/lib/lock/stringname.o
+
+    It is then linked to the program using the command:
+        $ g++ ../build/54/main.o -o ../build/54/a.out -L ../build/54/lib/ -llockutil
+
+Show that your directory organization has a separate directory for the development of the library.
+
+    the sources are organized as normal:
+        54
+        ├── main.cpp
+        └── lock
+           ├── lock.ih
+           ├── lock.h
+           ├── valid.cpp
+           ├── stringname.cpp
+           ├── open.cpp
+           ├── lockpath.cpp
+           ├── lock3.cpp
+           ├── lock2.cpp
+           └── lock1.cpp
+
+    But the library files are placed in their own directory when compiling:
+        build/54
+        ├── a.out
+        ├── main.o
+        └── lib
+           ├── liblockutil.a
+           └── lock
+              ├── valid.o
+              ├── stringname.o
+              ├── open.o
+              ├── lockpath.o
+              ├── lock3.o
+              ├── lock2.o
+              └── lock1.o

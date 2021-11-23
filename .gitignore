@@ -38,5 +38,7 @@ Femke/
 build/
 .cache/
 
+compile_commands.json
+
 # exclude zip files
 *.zip

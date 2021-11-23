@@ -6,6 +6,9 @@ main.cpp
 
 lock/lock.h
 lock/lock.ih
+lock/lock1.cpp
+lock/lock2.cpp
+lock/lock3.cpp
 lock/valid.cpp
 lock/open1.cpp
 lock/lockpath.cpp

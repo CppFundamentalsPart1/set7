@@ -2,6 +2,6 @@
 
 Lock::Lock(string const &path)
 :
-    Lock(path, stringName(path, &dirname))
+    Lock(path, stringName(path, &dirname))  // delegate construction
 {
 }

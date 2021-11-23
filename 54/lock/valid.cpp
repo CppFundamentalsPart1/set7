@@ -2,5 +2,5 @@
 
 bool Lock::valid() const
 {
-    return d_fd > -1;
+    return d_fileDescriptor >= 0;
 }

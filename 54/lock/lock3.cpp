@@ -2,6 +2,6 @@
 
 Lock::~Lock()
 {
-    if (d_fd > -1)
-        close(d_fd);
+    if (d_fileDescriptor >= 0)
+        close(d_fileDescriptor);  // close the file if it was locked
 }
