@@ -14,11 +14,10 @@ int main(int argc, char *argv[])
     ifstream in(argv[argc - 2]);
     ofstream out(argv[argc - 1]);
 
-    DnaEncoder encoder;
     if (writeBinary)
-        encoder.convToBinary(in, out);
+        DnaEncoder::convToBinary(in, out);
     else
-        encoder.convToText(in, out);
+        DnaEncoder::convToText(in, out);
 
     in.close();
     out.close();

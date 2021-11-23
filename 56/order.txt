@@ -3,10 +3,10 @@ explain.txt
 main.ih
 main.cpp
 
-dnaencoder.h
-dnaencoder.ih
-convtobinary.cpp
-convtotext.cpp
-copyfile.cpp
-getchars.cpp
-getbinary.cpp
+dnaencoder/dnaencoder.h
+dnaencoder/dnaencoder.ih
+dnaencoder/convtobinary.cpp
+dnaencoder/convtotext.cpp
+dnaencoder/copyfile.cpp
+dnaencoder/getchars.cpp
+dnaencoder/getbinary.cpp

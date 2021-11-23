@@ -1,12 +1,13 @@
 #include "dnaencoder.ih"
-bool DnaEncoder::getBinary(char bases[4], char *dest) const
+
+bool DnaEncoder::getBinary(char const bases[4], char *dest)
 {
     *dest = 0;  // reset value to 0
 
     for (size_t idx = 4, shift = 0; idx--; shift += 2)
         switch (bases[idx])
         {
-            case 'A':
+            case 'A':  // shifting in 0 would be useless
             break;
             case 'T':
                 *dest |= 1 << shift;

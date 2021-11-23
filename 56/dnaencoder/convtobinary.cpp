@@ -1,6 +1,6 @@
 #include "dnaencoder.ih"
 
-bool DnaEncoder::convToBinary(std::ifstream &in, std::ofstream &out) const
+bool DnaEncoder::convToBinary(std::ifstream &in, std::ofstream &out)
 {
     out.put(s_magicHeader);
 
@@ -11,7 +11,7 @@ bool DnaEncoder::convToBinary(std::ifstream &in, std::ofstream &out) const
     }
 
     char bases[4];
-    char numRead;
+    char numRead = 0;
     while (true)
     {
         in.read(bases, sizeof(bases));
@@ -23,8 +23,7 @@ bool DnaEncoder::convToBinary(std::ifstream &in, std::ofstream &out) const
 
         char binary;
         if (!getBinary(bases, &binary))  // character that was not A, T, C or
-                                         // G
-            return false;
+            return false;                // G
 
         out.put(binary);
     }

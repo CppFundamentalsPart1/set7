@@ -1,7 +1,5 @@
 explain.txt
 
-answers.txt
-
 main.cpp
 
 lock/lock.h
@@ -14,3 +12,5 @@ lock/open1.cpp
 lock/lockpath.cpp
 lock/open.cpp
 lock/stringname.cpp
+
+answers.txt

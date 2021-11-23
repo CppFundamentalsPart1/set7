@@ -1,6 +1,6 @@
 #include "dnaencoder.ih"
 
-bool DnaEncoder::convToText(std::ifstream &in, std::ofstream &out) const
+bool DnaEncoder::convToText(std::ifstream &in, std::ofstream &out)
 {
     if (in.get() != s_magicHeader)
         return false;  // no magic header so no human readable input

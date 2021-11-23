@@ -2,8 +2,9 @@
 
 void printProcess(acct_v3 const &process)
 {
-    cout << '\'' << process.ac_comm << "' ";
+    cout << '\'' << process.ac_comm << "' ";  // print process name
 
+    // print name if kill or term, else print exit code
     switch (process.ac_exitcode)
     {
         case SIGKILL:
@@ -16,5 +17,4 @@ void printProcess(acct_v3 const &process)
             cout << process.ac_exitcode << '\n';
         break;
     }
-
 }

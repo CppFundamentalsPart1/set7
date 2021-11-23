@@ -5,16 +5,16 @@
 
 class DnaEncoder
 {
-    static char const s_magicHeader = 109;
+    static char const s_magicHeader = 109; // used to indicate file is binary
 public:
-    bool convToBinary(std::ifstream &in, std::ofstream &out) const;
-    bool convToText(std::ifstream &in, std::ofstream &out) const;
+    static bool convToBinary(std::ifstream &in, std::ofstream &out);
+    static bool convToText(std::ifstream &in, std::ofstream &out);
 
 private:
-    void copyFile(std::ifstream &in, std::ofstream &out) const;
+    static void copyFile(std::ifstream &in, std::ofstream &out);
 
-    void getChars(char val, char ret[4]) const;
-    bool getBinary(char bases[4], char *dest) const;
+    static void getChars(char val, char ret[4]);
+    static bool getBinary(char const bases[4], char *dest);
 };
 
 #endif  // _DNA_ENCODER_H_
